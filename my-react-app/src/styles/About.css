@@ -1,0 +1,16 @@
+
+.about-container {
+  padding: 20px;
+}
+
+.about-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.about-container h2 {
+  margin-bottom: 10px;
+}

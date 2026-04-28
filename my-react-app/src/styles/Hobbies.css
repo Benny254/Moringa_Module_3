@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #452a15;
+  margin: 0;
+  padding: 0;
+}
+
+.hobbies-container {
+  padding: 20px;
+}
+
+.hobby {
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+/* Highlight top 3 hobbies */
+.highlight {
+  background-color: rgb(102, 203, 237);
+  color: #fff;
+}
+
+.hobbies-container h2 {
+  margin-bottom: 10px;
+}
