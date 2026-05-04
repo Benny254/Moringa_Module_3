@@ -20,7 +20,7 @@ function App() {
   );
 
   return (
-    <div className="app-container">
+      <div className="app-container" style={{ maxWidth: "600px", margin: "0 auto", padding: "20px" }}>
       <h1>Portfolio Platform</h1>
 
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />

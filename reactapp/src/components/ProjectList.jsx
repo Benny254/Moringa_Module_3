@@ -5,7 +5,22 @@ function ProjectList({ projects }) {
   return (
     <div className="project-list">
       {projects.map((project) => (
-        <ProjectCard key={project.id} project={project} />
+        <div
+          key={project.id}
+          style={{
+            marginBottom: "20px",
+            borderRadius: "5px",
+            backgroundColor: "#f0b536",
+            padding: "20px",
+            boxSizing: "border-box",
+            maxWidth: "600px",
+            width: "100%",
+            color: "black",
+            border: "1px solid #714c4c",
+          }}
+        >
+          <ProjectCard project={project} />
+        </div>
       ))}
     </div>
   );

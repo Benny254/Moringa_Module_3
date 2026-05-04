@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { beforeAll } from "vitest";
 
 function ProjectForm({ addProject }) {
   const [formData, setFormData] = useState({
@@ -28,21 +29,40 @@ function ProjectForm({ addProject }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
+      <input style={{ 
+        marginBottom: "10px", 
+        padding: "10px",
+        borderRadius: "5px", 
+        border: "1px solid #ccc"
+      }}
         name="name"
         placeholder="Project name"
         value={formData.name}
         onChange={handleChange}
       />
 
-      <input
+      <input style={{ 
+        marginBottom: "10px", 
+        padding: "10px",
+        borderRadius: "5px", 
+        border: "1px solid #ccc",
+        }}
         name="description"
         placeholder="Description"
         value={formData.description}
         onChange={handleChange}
       />
 
-      <button type="submit">Add Project</button>
+      <button type="submit" style={{ 
+        padding: "10px 20px",
+        backgroundColor: "#007bff4e",
+        color: "#fff",
+        border: "none",
+        borderRadius: "5px",
+        cursor: "pointer"
+      }}>
+        Add Project
+      </button>
     </form>
   );
 }
