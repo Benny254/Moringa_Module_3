@@ -1,0 +1,50 @@
+.home-page {
+  min-height: calc(100vh - 72px);
+  background-color: var(--coffee-hero);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-light);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  max-width: 340px;
+  line-height: 1.5;
+}
+
+.hero-cta {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background-color: var(--accent);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.hero-cta:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}

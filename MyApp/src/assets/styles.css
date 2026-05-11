@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+/* ─── Reset ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #F5ECD7;
+  color: #2C1A0E;
+  min-height: 100vh;
+}
+
+/* ─── App Layout ─────────────────────────────────────── */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ─── NAV ────────────────────────────────────────────── */
+nav {
+  background: #7A6050;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.nav-link.active {
+  border-bottom-color: #fff;
+}
+
+.nav-link:hover {
+  border-bottom-color: rgba(255,255,255,0.5);
+}
+
+/* ─── HERO ───────────────────────────────────────────── */
+.hero {
+  flex: 1;
+  background: #8B5E3C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 60px);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  color: #2C1A0E;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #fff;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+/* ─── SHOP LAYOUT ───────────────────────────────────── */
+.shop-layout {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 60px);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  background: #A67C5B;
+  padding: 1.5rem 1rem;
+}
+
+.sidebar h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 1.25rem;
+  outline: none;
+}
+
+/* Filters */
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #F5ECD7;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+
+/* ─── PRODUCTS ──────────────────────────────────────── */
+.product-area {
+  flex: 1;
+  background: #8B5E3C;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  background: #F5ECD7;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #6B3F2A;
+}
+
+.card-desc {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.card-origin {
+  font-size: 0.78rem;
+  color: #A67C5B;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #6B3F2A;
+  margin-top: auto;
+}
+
+.empty-state {
+  color: #F5ECD7;
+  text-align: center;
+  padding: 3rem;
+  opacity: 0.7;
+}
+
+/* ─── MODAL ─────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal {
+  background: #F5ECD7;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 420px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* ─── BUTTONS ───────────────────────────────────────── */
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #6B3F2A;
+  color: #fff;
+}
+
+.btn-danger {
+  background: #C0392B;
+  color: #fff;
+}
+
+/* ─── FORM ───────────────────────────────────────────── */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.field label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.field input,
+.field textarea {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ─── SPINNER ───────────────────────────────────────── */
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 3rem auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── TOAST ─────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #2C1A0E;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────── */
+@media (max-width: 600px) {
+  .sidebar { width: 150px; }
+  .product-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 420px) {
+  .shop-layout { flex-direction: column; }
+  .sidebar { width: 100%; }
+  .product-grid { grid-template-columns: 1fr; }
+}

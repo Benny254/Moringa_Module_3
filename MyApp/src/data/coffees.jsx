@@ -1,0 +1,68 @@
+export const initialCoffees = [
+  {
+    id: 1,
+    name: "Ethiopian Yirgacheffe",
+    description: "Bright and fruity with floral notes",
+    origin: "Ethiopia",
+    price: "$18.99",
+    location: "Location 1",
+  },
+  {
+    id: 2,
+    name: "Colombian Supremo",
+    description: "Smooth body with caramel sweetness",
+    origin: "Colombia",
+    price: "$15.99",
+    location: "Location 2",
+  },
+  {
+    id: 3,
+    name: "Sumatra Mandheling",
+    description: "Full-bodied, earthy and complex",
+    origin: "Indonesia",
+    price: "$17.49",
+    location: "Location 1",
+  },
+  {
+    id: 4,
+    name: "Guatemala Antigua",
+    description: "Rich chocolate with subtle spice",
+    origin: "Guatemala",
+    price: "$16.99",
+    location: "Location 3",
+  },
+  {
+    id: 5,
+    name: "Kenya AA",
+    description: "Bold, wine-like acidity with berry hints",
+    origin: "Kenya",
+    price: "$19.99",
+    location: "Location 2",
+  },
+  {
+    id: 6,
+    name: "Costa Rica Tarrazu",
+    description: "Clean, bright with honey and citrus",
+    origin: "Costa Rica",
+    price: "$16.49",
+    location: "Location 4",
+  },
+  {
+    id: 7,
+    name: "Brazil Santos",
+    description: "Mild, nutty with low acidity",
+    origin: "Brazil",
+    price: "$13.99",
+    location: "Location 3",
+  },
+  {
+    id: 8,
+    name: "Peru Organic",
+    description: "Sweet and balanced, chocolate finish",
+    origin: "Peru",
+    price: "$15.49",
+    location: "Location 4",
+  },
+];
+
+export const locations = ["Location 1", "Location 2", "Location 3", "Location 4"];

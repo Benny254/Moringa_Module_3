@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --coffee-dark: #6b4f3a;
+  --coffee-mid: #8b6347;
+  --coffee-light: #a07850;
+  --coffee-hero: #9a7355;
+  --nav-bg: #7a6355;
+  --card-bg: #d4c4b0;
+  --card-hover: #c8b8a2;
+  --text-dark: #1a1008;
+  --text-light: #f5f0eb;
+  --text-muted: #7a6355;
+  --accent: #8b2020;
+  --accent-hover: #6e1a1a;
+  --error: #c0392b;
+  --border-input: #c4b09a;
+  --input-bg: #ffffff;
+  --sidebar-bg: #7a6355cc;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--coffee-hero);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+}
